@@ -1,0 +1,10 @@
+# Archivos compilados de Java
+*.class
+
+# Datos del contenedor de MySQL (Evita el error de mysql.sock)
+mysql_data/
+
+# Configuración de IDE y temporales
+.vscode/
+*.log
+

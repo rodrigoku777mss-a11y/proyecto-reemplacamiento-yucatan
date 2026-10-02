@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  base_datos:
+    image: mysql:8.0
+    container_name: mysql_reemplacamiento
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password_clase
+      MYSQL_DATABASE: reemplacamiento
+    ports:
+      - "3308:3306"
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+      - ./sql/creacion_estructura.sql:/docker-entrypoint-initdb.d/init.sql
+
